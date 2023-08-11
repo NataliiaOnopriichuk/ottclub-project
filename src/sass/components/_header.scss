@@ -1,0 +1,139 @@
+.header{
+  padding-top: 18px;
+  padding-bottom: 8px;
+
+  @include mobile {
+    padding-top: 44px;
+  padding-bottom: 8px;
+  }
+
+  @include tablet {
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+
+  @include desktop-xl {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__wrapper {
+    @include flex();
+  }
+}
+
+
+// logo
+.logo {
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  background: url('../images/Logo.svg') no-repeat center center / contain;
+
+  @include tablet {
+    width: 64px;
+    height: 64px;
+  }
+
+  @include tablet-md {
+    width: 72px;
+    height: 72px;
+  }
+
+  @include tablet-md {
+    width: 72px;
+    height: 72px;
+  }
+
+  @include desktop-xl {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+// header navigation
+.header-nav {
+  @include tablet {
+    @include centeredFlex(start);
+    gap: 48px;
+  }
+
+  &__list {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      gap: 24px;
+    }
+
+    @include desktop-xl {
+      gap: 16px;
+    }
+  }
+
+  &__link {
+    fill: $light-bg;
+  
+    transition: all 0.5s $transition;
+  
+    &:hover {
+      fill: $hover-color;
+    }
+  }
+
+  &__icon {
+    fill: inherit;
+  }
+
+  &__auth {
+    display: flex;
+    gap: 24px;
+
+    @include tablet {
+      width: 64px;
+      height: 64px;
+    }
+  
+    @include desktop-xl {
+      gap: 32px;
+    }
+  }
+
+  &__auth-register {
+    @include transparentButton(0, 0, 600);
+    border: none;
+    opacity: 0.8;
+
+    @include mobile-only {
+      display: none;
+    }
+  
+    @include desktop-xl {
+      font-size: 20px;
+    }
+  
+    &:hover {
+      color: $hover-color;
+    }
+  }
+
+  &__auth-login {
+    @include transparentButton();
+  
+    @include desktop-xl {
+      font-size: 20px;
+    }
+  
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+}
+
+
+
+
+
+
+
+

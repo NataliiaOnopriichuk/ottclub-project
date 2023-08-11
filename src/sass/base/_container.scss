@@ -1,0 +1,35 @@
+@import '../utils/mixin';
+
+.container {
+    min-width: 320px;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin: 0 auto;
+   
+  
+    @include mobile {
+      width: 375px;
+    }
+  
+    @include tablet {
+      width: 768px;
+      padding: 0 40px;
+    }
+
+    @include tablet-md {
+        width: 990px;
+        padding: 0 48px;
+      }
+
+    @include desktop {
+      width: 1440px;
+      padding: 0 172px;
+    }
+
+    @include desktop-xl {
+        width: 1920px;
+        padding: 0 229px;
+      }
+  }
+
