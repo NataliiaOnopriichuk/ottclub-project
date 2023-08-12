@@ -14,22 +14,26 @@
   
     @include tablet {
       width: 768px;
-      padding: 0 40px;
+      padding-left: 40px;
+      padding-right: 40px;
     }
 
     @include tablet-md {
         width: 990px;
-        padding: 0 48px;
+        padding-left: 48px;
+        padding-right: 48px;
       }
 
     @include desktop {
       width: 1440px;
-      padding: 0 172px;
+      padding-left: 172px;
+    padding-right: 172px;
     }
 
     @include desktop-xl {
         width: 1920px;
-        padding: 0 229px;
+        padding-left: 229px;
+    padding-right: 229px;
       }
   }
 

@@ -1,7 +1,6 @@
 .primary-button {
     display: inline-block;
     padding: 14px;
-    width: 100%;
   
     font-weight: 600;
     font-size: 15px;
@@ -17,5 +16,25 @@
   
     &:hover {
       background-color: $hover-color;
+    }
+
+    @include mobile {
+      padding: 16px 24px;
+    font-size: 17px;
+    }
+  
+    @include tablet-md {
+      padding: 16px 28px;
+    font-size: 18px;
+    }
+  
+    @include desktop {
+      padding: 18px 32px;
+      font-size: 20px;
+    }
+  
+    @include desktop-xl {
+      padding: 24px 40px;
+      font-size: 26px;
     }
 }

@@ -40,11 +40,6 @@
     height: 72px;
   }
 
-  @include tablet-md {
-    width: 72px;
-    height: 72px;
-  }
-
   @include desktop-xl {
     width: 96px;
     height: 96px;
@@ -90,7 +85,6 @@
     gap: 24px;
 
     @include tablet {
-      width: 64px;
       height: 64px;
     }
   
