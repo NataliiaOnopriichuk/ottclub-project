@@ -1,0 +1,21 @@
+.primary-button {
+    display: inline-block;
+    padding: 14px;
+    width: 100%;
+  
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.4;
+  
+    color: $primary-color;
+  
+    background: $dark-bg;
+    border: none;
+    border-radius: 5px;
+  
+    transition: all 0.5s $transition;
+  
+    &:hover {
+      background-color: $hover-color;
+    }
+}

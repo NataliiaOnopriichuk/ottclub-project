@@ -5,7 +5,7 @@
   "homepage": "https://NataliiaOnopriichuk.github.io/ottclub-project",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /ottclub-project/"
   },
   "repository": {
     "type": "git",
