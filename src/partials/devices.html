@@ -1,0 +1,68 @@
+<section class="devices">
+    <div class="container">
+        <div class=" devices__wrapper">
+            <div class="devices__wrapper-tab">
+                <h3 class="devices__title">Смотрите на разных устройствах</h3>
+                <p class="devices__text">
+                    Подключайте подписку FULL и смотрите любимые каналы на 5
+                    устройствах, среди которых: телевизор, компьютер, планшет или
+                    смартфон
+                </p>
+                <button class="devices__btn" type="button">
+                    Протестировать 7 дней бесплатно
+                </button>
+            </div>
+            <!-- devices img -->
+            <div>
+                <picture>
+                    <source srcset="./images/devices/mobile-devices@1x.png 1x,
+                                                    ./images/devices/mobile-devices@2x.png 2x"
+                        media="(min-width:375px)" />
+                    <img class="devices__img" src="./images/devices/devices@1x.png" srcset="./images/devices/devices@1x.png,
+                                                ./images/devices/devices@2x.png" alt="devices" />
+                </picture>
+
+                <picture>
+                    <source srcset="./images/devices/tablet-md-devices@1x.png 1x,
+                                                    ./images/devices/tablet-md-devices@2x.png 2x"
+                        media="(min-width:990px)" />
+                    <img class="devices__img--tab" src="./images/devices/tablet-devices@1x.png" srcset="./images/devices/tablet-devices@1x.png,
+                                                ./images/devices/tablet-devices@2x.png" alt="devices" />
+                </picture>
+
+                <picture>
+                    <source srcset="./images/devices/desktop-xl-devices@1x.png 1x,
+                                                    ./images/devices/desktop-xl-devices@2x.png 2x"
+                        media="(min-width:1440px)" />
+                    <img class="devices__img--dt" src="./images/devices/desktop-devices@1x.png" srcset="./images/devices/desktop-devices@1x.png,
+                                                ./images/devices/desktop-devices@2x.png" alt="devices" />
+                </picture>
+            </div>
+        </div>
+        <button class="devices__btn devices__btn--mob" type="button">
+            Протестировать 7 дней бесплатно
+        </button>
+        <!-- devices list -->
+        <ul class="devices__list">
+            <li class="devices__item">
+                <svg class="devices__icon devices__icon--lg">
+                    <use href="./images/sprite.svg#lg"></use>
+                </svg>
+            </li>
+            <li class="devices__item">
+                <svg class="devices__icon devices__icon--ios">
+                    <use href="./images/sprite.svg#ios"></use>
+                </svg>
+            </li>
+            <li class="devices__item">
+                <svg class="devices__icon devices__icon--android">
+                    <use href="./images/sprite.svg#android"></use>
+                </svg>
+            </li>
+            <li class="devices__item">
+                <svg class="devices__icon devices__icon--samsung">
+                    <use href="./images/sprite.svg#samsung"></use>
+                </svg>
+            </li>
+        </ul>
+</section>

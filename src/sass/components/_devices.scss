@@ -1,0 +1,326 @@
+.devices {
+  padding-bottom: 17px;
+
+  @include desktop {
+    padding: 0;
+  }
+
+  &__wrapper {
+    @include tablet {
+      @include flex();
+      margin: 0;
+    }
+
+    @include desktop {
+      padding: 0;
+      gap: 20px;
+    }
+
+    @include desktop-xl {
+      gap: 30px;
+    }
+  }
+
+  &__wrapper-tab {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 455px;
+      margin-left: 0;
+    }
+
+    @include tablet-md {
+      width: 485px;
+    }
+
+    @include desktop {
+      width: 650px;
+    }
+  }
+
+  &__title {
+    @extend .section-title;
+
+    @include mobile-only {
+      text-align: center;
+    }
+
+    @include tablet {
+      width: 410px;
+    }
+
+    @include tablet-md {
+      width: 480px;
+    }
+
+    @include desktop {
+      width: 530px;
+    }
+
+    @include desktop-xl {
+      width: 715px;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 1.5;
+    opacity: 0.7;
+    margin: 16px 0 5px 0;
+
+    @include mobile-only {
+      text-align: center;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      margin: 18px 0 13px 0;
+    }
+
+    @include tablet {
+      margin: 24px 0 32px 0;
+      width: 410px;
+    }
+
+    @include tablet-md {
+      margin: 24px 0 40px 0;
+      width: 480px;
+    }
+
+    @include desktop {
+      margin: 16px 0 48px 0;
+      width: 530px;
+    }
+
+    @include desktop-xl {
+      font-size: 20px;
+      margin: 30px 0 60px 0;
+      width: 715px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    margin: 0 auto;
+
+    @include tablet {
+      display: none;
+    }
+
+    &--tab {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+
+      @include desktop {
+        display: none;
+      }
+    }
+
+    &--dt {
+      display: none;
+
+      @include desktop {
+        display: block;
+      }
+    }
+  }
+
+  &__btn {
+    @extend .primary-button;
+    font-size: 15px;
+    font-weight: 500;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    width: 100%;
+    white-space: nowrap;
+
+    @include mobile-only {
+      display: none;
+    }
+
+    @include mobile {
+      font-size: 17px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    @include tablet {
+      width: 340px;
+    }
+
+    @include tablet-md {
+      font-size: 18px;
+      font-weight: 600;
+      width: 368px;
+    }
+
+    @include tablet-md {
+      font-size: 20px;
+      width: 411px;
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+
+    @include desktop-xl {
+      font-size: 26px;
+      width: 530px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+
+    &--mob {
+      display: none;
+
+      @include mobile-only {
+        display: block;
+      }
+    }
+  }
+
+  // icon of devices
+  &__list {
+    @include centeredFlex($jusCon: space-around);
+    flex-wrap: wrap;
+    padding: 12px 0;
+    margin-top: 34px;
+
+    @include mobile-only {
+      gap: 29px;
+    }
+
+    @include mobile {
+      margin-top: 32px;
+    }
+
+    @include tablet {
+      margin-top: 44px;
+      padding: 28px 0;
+      justify-content: space-between;
+    }
+
+    @include tablet-md {
+      margin-top: 50px;
+      padding: 48px 0;
+    }
+
+    @include desktop-xl {
+      margin-top: 80px;
+    }
+  }
+
+  .devices__icon {
+    &--lg {
+      width: 134px;
+      height: 24px;
+
+      @include mobile {
+        width: 170px;
+        height: 30px;
+      }
+
+      @include tablet {
+        width: 160px;
+        height: 22px;
+      }
+
+      @include tablet-md {
+        width: 215px;
+        height: 30px;
+      }
+
+      @include desktop-xl {
+        width: 342px;
+        height: 46px;
+      }
+    }
+
+    &--ios {
+      width: 100px;
+      height: 40px;
+
+      @include mobile {
+        width: 134px;
+        height: 24px;
+      }
+
+      @include tablet {
+        width: 134px;
+        height: 24px;
+      }
+
+      @include tablet-md {
+        width: 134px;
+        height: 24px;
+      }
+
+      @include desktop {
+        width: 134px;
+        height: 24px;
+      }
+
+      @include desktop-xl {
+        width: 134px;
+        height: 24px;
+      }
+    }
+
+    &--android {
+      width: 128px;
+      height: 24px;
+
+      @include mobile {
+        width: 151px;
+        height: 30px;
+      }
+
+      @include tablet {
+        width: 160px;
+        height: 26px;
+      }
+
+      @include tablet-md {
+        width: 175px;
+        height: 30px;
+      }
+
+      @include desktop {
+        width: 215px;
+        height: 34px;
+      }
+
+      @include desktop-xl {
+        width: 286px;
+        height: 46px;
+      }
+    }
+
+    &--samsung {
+      width: 106px;
+      height: 24px;
+
+      @include mobile {
+        width: 148px;
+        height: 26px;
+      }
+
+      @include tablet-md {
+        width: 198px;
+        height: 34px;
+      }
+
+      @include desktop {
+        width: 215px;
+        height: 34px;
+      }
+
+      @include desktop-xl {
+        width: 287px;
+        height: 46px;
+      }
+    }
+  }
+}
