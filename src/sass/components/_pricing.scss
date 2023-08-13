@@ -1,0 +1,364 @@
+.pricing {
+  padding: 52px 0 33px;
+
+  @include tablet {
+    padding: 72px 0 50px;
+  }
+
+  @include tablet-md {
+    padding: 93px 0 56px;
+  }
+
+  @include desktop-xl {
+    padding: 120px 0 80px;
+  }
+
+  // wraps
+  &__wrapper {
+    position: relative;
+    text-align: center;
+
+    padding: 51px 16px 32px;
+    border: 2px solid $accent-border;
+    border-radius: 8px;
+
+    @include tablet {
+      padding: 60px 84px 40px 73px;
+    }
+
+    @include tablet-md {
+      padding: 65px 127px 64px 117px;
+    }
+
+    @include desktop {
+      margin: 0 auto;
+      width: 862px;
+    }
+
+    @include desktop-xl {
+      width: 1149px;
+      padding: 86px 223px 93px 192px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: 50%;
+
+      width: 64px;
+      height: 2px;
+
+      transform: translateX(-50%);
+
+      background-color: $body-bg;
+
+      @include tablet-md {
+        width: 86px;
+      }
+
+      @include desktop {
+        width: 92px;
+      }
+
+      @include desktop-xl {
+        width: 121px;
+        height: 3px;
+      }
+    }
+  }
+
+  &__inner {
+    @include tablet {
+      @include centeredFlex(space-around);
+    }
+
+    @include desktop {
+      justify-content: space-evenly;
+    }
+
+    @include desktop-xl {
+      justify-content: center;
+      gap: 70px;
+    }
+  }
+
+  // content
+  &__inner-currency {
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    line-height: calc(16 / 16);
+
+    text-transform: uppercase;
+
+    @include desktop-xl {
+      font-size: 20px;
+    }
+  }
+
+  &__inner-value {
+    font-weight: 600;
+    font-size: 67px;
+    line-height: calc(67 / 67);
+
+    color: $accent-color;
+
+    @include desktop-xl {
+      font-size: 90px;
+    }
+  }
+
+  &__inner-descr {
+    margin-bottom: 24px;
+    font-size: 15px;
+
+    opacity: 0.8;
+
+    @include mobile {
+      margin-bottom: 34px;
+      font-size: 16px;
+    }
+
+    @include desktop-xl {
+      font-size: 20px;
+    }
+  }
+
+  // description
+  &__inner-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 19px;
+    margin-bottom: 35px;
+
+    font-size: 15px;
+    text-align: left;
+
+    @include mobile {
+      gap: 23px;
+    }
+
+    @include tablet {
+      margin-bottom: 42px;
+    }
+
+    @include desktop {
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    @include desktop-xl {
+      gap: 27px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__inner-item {
+    display: flex;
+    gap: 16px;
+
+    font-size: 16px;
+
+    &::before {
+      content: '';
+      display: block;
+
+      width: 24px;
+      height: 24px;
+
+      background-image: url('../images/mark.svg');
+    }
+
+    @include tablet-md {
+      font-size: 18px;
+    }
+
+    @include desktop {
+      font-size: 20px;
+    }
+
+    @include desktop-xl {
+      font-size: 26px;
+    }
+  }
+
+  // pricing form
+  &__form {
+    @include tablet {
+      @include centeredFlex($jusCon: start);
+    }
+
+    @include tablet-md {
+      justify-content: center;
+    }
+  }
+
+  &__form-label {
+    position: relative;
+    display: block;
+    width: 100%;
+
+    @include mobile-only {
+      margin-bottom: 16px;
+    }
+
+    @include tablet-md {
+      width: 300px;
+    }
+
+    @include desktop-xl {
+      width: 400px;
+    }
+  }
+
+  &__form-input {
+    width: 100%;
+    height: 53px;
+    padding: 15px 0 15px 16px;
+
+    background-color: $primary-color;
+    border: transparent;
+    border-radius: 5px;
+
+    @include tablet {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    @include desktop {
+      height: 56px;
+    }
+
+    @include desktop-xl {
+      height: 69px;
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid $accent-border;
+    }
+
+    &::placeholder {
+      color: $placeholder-color;
+    }
+  }
+
+  &__form-btn {
+    @extend .primary-button;
+    width: 100%;
+    padding: 16px;
+    background: $secondary-dark-bg;
+
+    @include mobile {
+      font-size: 18px;
+    }
+
+    @include tablet {
+      width: auto;
+      height: 53px;
+      padding: 16px 32px;
+
+      white-space: nowrap;
+
+      font-size: 17px;
+      font-weight: 500;
+
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    @include tablet-md {
+      padding: 16px 40px;
+
+      font-size: 18px;
+    }
+
+    @include desktop {
+      height: 56px;
+
+      font-size: 20px;
+    }
+
+    @include desktop-xl {
+      height: 69px;
+      padding: 20px 50px;
+
+      font-size: 24px;
+    }
+  }
+
+  // eye decor
+  &__eye-wrapper {
+    position: absolute;
+    top: -33px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 66px;
+    height: 33px;
+    border-radius: 100px 100px 0 0;
+    border-top: 2px solid $accent-border;
+    border-left: 2px solid $accent-border;
+    border-right: 2px solid $accent-border;
+
+    @include tablet-md {
+      top: -43px;
+
+      width: 86px;
+      height: 43px;
+    }
+
+    @include desktop {
+      top: -46px;
+
+      width: 92px;
+      height: 46px;
+    }
+
+    @include desktop-xl {
+      top: -62px;
+
+      width: 124px;
+      height: 62px;
+    }
+  }
+
+  &__eye-img {
+    width: 40px;
+    height: 50px;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+
+    @include mobile {
+      width: 44px;
+      height: 55px;
+    }
+
+    @include tablet {
+      width: 46px;
+      height: 58px;
+    }
+
+    @include tablet-md {
+      width: 50px;
+      height: 62px;
+    }
+
+    @include desktop {
+      width: 54px;
+      height: 68px;
+    }
+
+    @include desktop-xl {
+      width: 72px;
+      height: 90px;
+    }
+  }
+}
