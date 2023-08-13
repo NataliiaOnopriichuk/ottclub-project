@@ -1,0 +1,155 @@
+.questions {
+  padding-top: 16px;
+
+  @include mobile {
+    padding-top: 32px;
+  }
+
+  @include tablet {
+    padding-top: 40px;
+  }
+
+  @include tablet-md {
+    padding-top: 57px;
+  }
+
+  @include desktop {
+    padding-top: 48px;
+  }
+
+  @include desktop-xl {
+    padding-top: 110px;
+  }
+
+  &__title {
+    @extend .section-title;
+    margin-bottom: 24px;
+
+    @include mobile-only {
+      text-align: center;
+    }
+
+    @include mobile {
+      margin-bottom: 32px;
+    }
+
+    @include tablet {
+      margin-bottom: 24px;
+    }
+
+    @include tablet-md {
+      margin-bottom: 40px;
+    }
+
+    @include desktop {
+      margin-bottom: 48px;
+    }
+
+    @include desktop-xl {
+      margin-bottom: 65px;
+    }
+  }
+
+  &__wrapper {
+    @include centeredFlex($jusCon: start, $aliIte: stretch);
+    border-bottom: 1px solid rgb(255 255 255 / 10%);
+    padding-bottom: 100px;
+
+    @include mobile-only {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 24px;
+      padding-bottom: 40px;
+    }
+
+    @include tablet-md {
+      gap: 32px;
+      padding-bottom: 75px;
+    }
+
+    @include desktop {
+      gap: 32px 178px;
+    }
+
+    @include desktop-xl {
+      gap: 32px 212px;
+    }
+  }
+
+  // details
+  &__details {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(255 255 255 / 10%);
+
+    @include tablet {
+      width: calc((100% - 24px) / 2);
+    }
+
+    @include tablet-md {
+      padding-bottom: 27px;
+      width: calc((100% - 32px) / 2);
+    }
+
+    @include desktop {
+      width: calc((100% - 178px) / 2);
+    }
+
+    @include desktop-xl {
+      padding-bottom: 40px;
+      width: calc((100% - 212px) / 2);
+    }
+  }
+
+  &__descr {
+    @include flex();
+    list-style: none;
+    font-size: 16px;
+    line-height: 1.4;
+    cursor: pointer;
+
+    @include tablet-md {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    @include desktop-xl {
+      font-size: 24px;
+    }
+  }
+
+  &__descr-title {
+    width: 228px;
+
+    @include tablet-md {
+      width: 353px;
+    }
+
+    @include desktop {
+      width: 394px;
+    }
+  }
+
+  &__descr-icon {
+    width: 10px;
+    height: 10px;
+    stroke: $primary-color;
+  }
+
+  &__content {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+
+    @include tablet-md {
+      font-size: 16px;
+    }
+
+    @include desktop-xl {
+      font-size: 20px;
+    }
+  }
+}

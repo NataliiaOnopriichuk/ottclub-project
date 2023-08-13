@@ -1,0 +1,145 @@
+.footer {
+  padding: 48px 0 14px;
+
+  @include mobile {
+    padding: 64px 0 14px;
+  }
+
+  @include desktop-xl {
+    padding: 90px 0 14px;
+  }
+
+  &__wrapper--top {
+    @include centeredFlex($jusCon: start, $aliIte: stretch);
+    font-size: 14px;
+    line-height: 1.4;
+
+    opacity: 0.8;
+
+    @include mobile-only {
+      gap: 32px;
+      flex-direction: column;
+    }
+
+    @include desktop-xl {
+      font-size: 18px;
+    }
+  }
+
+  &__meta {
+    @include mobile {
+      display: flex;
+      gap: 22px;
+    }
+
+    @include tablet-md {
+      gap: 110px;
+    }
+  }
+
+  &__meta-list {
+    @include tablet {
+      width: 195px;
+    }
+  }
+
+  &__meta-link {
+    color: inherit;
+  }
+
+  &__contacts {
+    @include tablet {
+      margin-left: auto;
+    }
+
+    @media screen and (min-width: 375px) and (max-width: 767px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__meta-list,
+  &__contacts-wrapper {
+    @include centeredFlex($jusCon: start, $aliIte: stretch);
+    gap: 8px;
+    flex-direction: column;
+
+    @include desktop-xl {
+      gap: 10px;
+    }
+  }
+
+  &__contacts-title {
+    margin-bottom: 18px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.4;
+    opacity: 1;
+
+    @include desktop-xl {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__contacts-link {
+    color: inherit;
+  }
+
+  &__support {
+    margin-top: 32px;
+
+    @media screen and (max-width: 374px) {
+      margin-top: 16px;
+    }
+
+    @media screen and (min-width: 375px) and (max-width: 767px) {
+      margin-top: 45px;
+    }
+  }
+
+  &__support-title {
+    margin-bottom: 8px;
+  }
+
+  &__wrapper--bottom {
+    padding-top: 32px;
+  }
+
+  &__payment-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 21px;
+    row-gap: 16px;
+    justify-content: center;
+    margin-bottom: 32px;
+
+    @include tablet {
+      justify-content: flex-start;
+      margin-bottom: 22px;
+    }
+  }
+
+  &__payment-item {
+    width: 82px;
+  }
+
+  &__company {
+    opacity: 0.8;
+
+    @include tablet {
+      display: flex;
+      gap: 20px;
+      justify-content: end;
+    }
+  }
+
+  &__company-text {
+    font-size: 11px;
+
+    @include mobile-only {
+      text-align: center;
+    }
+  }
+}
