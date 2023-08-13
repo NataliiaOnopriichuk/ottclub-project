@@ -1,39 +1,37 @@
 @import '../utils/mixin';
 
 .container {
-    min-width: 320px;
-    width: 100%;
-    padding-right: 16px;
-    padding-left: 16px;
-    margin: 0 auto;
-   
-  
-    @include mobile {
-      width: 375px;
-    }
-  
-    @include tablet {
-      width: 768px;
-      padding-left: 40px;
-      padding-right: 40px;
-    }
+  min-width: 320px;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin: 0 auto;
 
-    @include tablet-md {
-        width: 990px;
-        padding-left: 48px;
-        padding-right: 48px;
-      }
-
-    @include desktop {
-      width: 1440px;
-      padding-left: 172px;
-    padding-right: 172px;
-    }
-
-    @include desktop-xl {
-        width: 1920px;
-        padding-left: 229px;
-    padding-right: 229px;
-      }
+  @include mobile {
+    width: 375px;
   }
 
+  @include tablet {
+    width: 768px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @include tablet-md {
+    width: 990px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  @include desktop {
+    width: 1440px;
+    padding-left: 172px;
+    padding-right: 172px;
+  }
+
+  @include desktop-xl {
+    width: 1920px;
+    padding-left: 229px;
+    padding-right: 229px;
+  }
+}
