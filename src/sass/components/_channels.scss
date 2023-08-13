@@ -1,0 +1,292 @@
+.channels {
+  padding: 50px 0 16px;
+
+  @include mobile {
+    padding: 50px 0 24px;
+  }
+
+  @include tablet {
+    padding: 67px 0 24px;
+  }
+
+  @include tablet-md {
+    padding: 67px 0 32px;
+  }
+
+  @include desktop {
+    padding: 65px 0 57px;
+  }
+
+  @include desktop-xl {
+    padding: 80px 0 84px;
+  }
+
+  &__title {
+    @extend .section-title;
+    position: relative;
+    text-align: center;
+
+    @include tablet {
+      text-align: left;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -80%;
+      left: 75%;
+
+      width: 40px;
+      height: 40px;
+
+      background: url('../images/tickets.svg') no-repeat center center;
+
+      @include tablet {
+        top: -80%;
+        left: 28%;
+
+        width: 48px;
+        height: 48px;
+      }
+
+      @include tablet-md {
+        top: -50%;
+        left: 25%;
+      }
+
+      @include desktop {
+        top: -30%;
+        left: 22%;
+      }
+    }
+  }
+
+  &__descr {
+    font-size: 15px;
+    line-height: 1.5;
+    opacity: 0.7;
+
+    margin-top: 8px;
+    text-align: center;
+
+    @include mobile {
+      font-size: 16px;
+      margin-top: 13px;
+    }
+
+    @include tablet {
+      margin-top: 16px;
+      text-align: left;
+      width: 510px;
+    }
+
+    @include tablet-md {
+      margin-top: 20px;
+      width: 526px;
+    }
+
+    @include desktop {
+      margin-top: 16px;
+      width: 626px;
+    }
+
+    @include desktop-xl {
+      font-size: 20px;
+      margin-top: 20px;
+      width: 840px;
+    }
+  }
+
+  // filter btn
+  &__filter-btn {
+    display: flex;
+    gap: 8px;
+
+    margin: 24px 0;
+    overflow: auto;
+
+    @include mobile {
+      gap: 16px;
+      margin: 32px 0 24px;
+    }
+
+    @include tablet {
+      gap: 24px;
+      margin: 33px 0 41px;
+    }
+
+    @include desktop {
+      gap: 12px;
+      margin: 34px 0 40px;
+      overflow: visible;
+    }
+
+    @include desktop-xl {
+      justify-content: space-between;
+      margin: 50px 0 52px;
+    }
+  }
+
+  &__filter-btn-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  &__filter-btn-text {
+    @include transparentButton(8px, 16px, 400, 16px, 1.5);
+
+    @include tablet {
+      padding: 12px, 18px;
+    }
+
+    @include desktop-xl {
+      padding: 12px, 24px;
+    }
+
+    .channels__filter-btn-input:checked + &,
+    .channels__filter-btn-input:hover + & {
+      background-color: $color-hover;
+    }
+  }
+
+  // channels list
+  &__list {
+    @include centeredFlex($jusCon: start, $aliIte: stretch);
+    flex-wrap: wrap;
+    gap: 17px;
+
+    @include tablet {
+      gap: 24px;
+    }
+
+    @include desktop {
+      gap: 49px;
+    }
+
+    @include desktop-xl {
+      gap: 70px;
+    }
+  }
+
+  &__list-item {
+    @include centeredFlex();
+    width: calc((100% - 2 * 17px) / 3);
+    height: 57px;
+
+    border: 1px solid #c6c6c8;
+    border-radius: 5px;
+
+    @include mobile {
+      border-radius: 8px;
+      height: 70px;
+    }
+
+    @include tablet {
+      width: calc((100% - 3 * 24px) / 4);
+      height: 105px;
+    }
+
+    @include tablet-md {
+      width: calc((100% - 4 * 24px) / 5);
+      height: 108px;
+    }
+
+    @include desktop {
+      width: calc((100% - 4 * 49px) / 5);
+      height: 122px;
+    }
+
+    @include desktop-xl {
+      width: calc((100% - 4 * 70px) / 5);
+      height: 162px;
+      border-radius: 10px;
+    }
+
+    &.sm-visible {
+      @include mobile-only {
+        display: none;
+      }
+    }
+
+    &.md-visible {
+      @include tablet-only {
+        display: none;
+      }
+    }
+
+    &--red {
+      background: linear-gradient(180deg, #ff6961 0%, #d70015 100%);
+    }
+
+    &--blue {
+      background: linear-gradient(180deg, #409cff 0%, #0040dd 100%);
+    }
+
+    &--green {
+      background: linear-gradient(180deg, #30db5b 0%, #248a3d 100%);
+    }
+
+    &--violet {
+      background: linear-gradient(180deg, #7d7aff 0%, #3634a3 100%);
+    }
+
+    &--orange {
+      background: linear-gradient(180deg, #ffd426 0%, #b25000 100%);
+    }
+  }
+
+  &__list-img {
+    width: 62px;
+
+    @include mobile {
+      width: 74px;
+    }
+
+    @include tablet {
+      width: 112px;
+    }
+
+    @include tablet-md {
+      width: 117px;
+    }
+
+    @include desktop {
+      width: 131px;
+    }
+
+    @include desktop-xl {
+      width: 174px;
+    }
+  }
+
+  // button more
+  &__btn-more {
+    @include transparentButton(0, 0, 600);
+    @include centeredFlex($jusCon: start);
+    gap: 8px;
+    margin-top: 18px;
+
+    border: transparent;
+    border: none;
+    stroke: $accent-color;
+    text-transform: uppercase;
+    margin-left: auto;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+
+    @include mobile {
+      margin-top: 26px;
+      font-size: 18px;
+    }
+  }
+
+  &__btn-more-icon {
+    stroke: inherit;
+    width: 15px;
+    height: 15px;
+  }
+}
